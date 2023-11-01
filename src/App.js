@@ -1,9 +1,22 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
+import Navbar from './components/Navbar';
 import './App.css';
 
 function App() {
+  const path = createBrowserRouter([
+    {
+      path: '/',
+      element: (
+        <>
+          <Navbar />
+        </>
+      ),
+    },
+  ]);
   return (
     <>
-      <h1>Hello World!</h1>
+      <RouterProvider router={path} />{' '}
     </>
   );
 }
